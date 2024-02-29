@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+
+<head>
+    <meta charset="UTF-8">
+    <link th:rel="stylesheet" href="/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>elenco squadre</title>
+</head>
+
+<body>
+
+
+    <h1>elenco ordinato per punteggio crescente</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Città</th>
+                <th>Punteggio</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="squadra : ${elenco}">
+                <td th:text="${squadra.id}"></td>
+                <td th:text="${squadra.nome}"></td>
+                <td th:text="${squadra.citta}"></td>
+                <td th:text="${squadra.punteggio}"></td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <br>
+
+    <div class="btn">
+        <a th:href="@{/Squadre/nuovo}>">Nuova Squadra</a>
+    </div>
+
+
+</body>
+
+</html>
