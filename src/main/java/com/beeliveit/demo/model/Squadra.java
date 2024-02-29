@@ -27,8 +27,14 @@ public class Squadra implements Comparable<Squadra>{
     public Squadra(String nome, String citta, Integer punteggio) {
         this.nome = nome;
         this.citta = citta;
-        this.punteggio = punteggio;
+        
+        if (punteggio >= 25 && punteggio <= 50) {
+            this.punteggio = punteggio;
+        } else {
+            throw new IllegalArgumentException("Il punteggio deve essere compreso tra 25 e 50");
+        }
     }
+    
 
     public int getId() {
         return id;

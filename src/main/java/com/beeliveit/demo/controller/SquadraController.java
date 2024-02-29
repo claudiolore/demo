@@ -58,7 +58,7 @@ public String elencoSquadre (   Model model,
 	
 		model.addAttribute("squadra", s);
 
-		return "/squadra/nuova";
+		return "/squadra/nuovo";
 	}
 
 	@PostMapping("/nuovo")
